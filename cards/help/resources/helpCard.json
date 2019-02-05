@@ -1,0 +1,13 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "For now, I can only respond to help inquiries. But soon I'll be able to provide more services.",
+      "wrap": true
+    }
+  ],
+  "speak": "For now, I can only respond to help inquiries. But soon I'll be able to provide more services."
+}
