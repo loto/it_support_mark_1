@@ -1,0 +1,70 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "When working with any printer, it is inevitable that you will encounter a paper jam. The following is a general guide for removing paper that has become stuck in one or more locations. Although most modern printers are similar in design, you may have to make slight adjustments to the following steps, depending on the brand and model of your printer.",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "horizontalAlignment": "Left",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://image.flaticon.com/icons/png/512/97/97918.png",
+              "size": "Small"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "horizontalAlignment": "Left",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Warning: You'll want to avoid pulling stuck paper out from under the front cover if possible, as it may cause damage to the printer. Instead, pull it from the back of the printer or paper tray.",
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "horizontalAlignment": "Left",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://image.flaticon.com/icons/png/512/107/107788.png",
+              "size": "Small"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "horizontalAlignment": "Left",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Note: It is important that you go through all of the following sections to avoid damage to your printer.",
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}

@@ -8,8 +8,11 @@ const { HelpCard } = require('./cards/help')
 const { ErrorCard } = require('./cards/error')
 const LUIS_CONFIGURATION = 'BasicBotLuisApplication'
 const INTENT = {
-  HELP: 'Help'
+  HELP: 'Help',
+  PRINTER_PAPER_JAM: 'PrinterPaperJam'
 }
+
+const { PrinterPaperJamStartDialog, PRINTER_PAPER_JAM_START_DIALOG_ID } = require('./dialogs/printer-paper-jam')
 
 class Bot {
   constructor (conversationState, userState, botConfig) {
@@ -30,6 +33,7 @@ class Bot {
     this.dialogState = conversationState.createProperty('dialogState')
 
     this.dialogs = new DialogSet(this.dialogState)
+    this.dialogs.add(new PrinterPaperJamStartDialog(PRINTER_PAPER_JAM_START_DIALOG_ID))
 
     this.conversationState = conversationState
     this.userState = userState
@@ -75,6 +79,10 @@ class Bot {
         if (!turnContext.responded && dialogContext.activeDialog) {
           await dialogContext.endDialog()
           await turnContext.sendActivity({ attachments: [ErrorCard, HelpCard] })
+        }
+      } else {
+        if (topIntent === INTENT.PRINTER_PAPER_JAM) {
+          await dialogContext.beginDialog(PRINTER_PAPER_JAM_START_DIALOG_ID)
         }
       }
     }
