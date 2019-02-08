@@ -7,7 +7,9 @@ const {
 const { DisclaimerCard } = require('./cards/disclaimer')
 
 const DIALOG_ID = 'startDialogId'
-const PROMPT_ID = 'confirmPromptId'
+const PROMPT_ID = 'paperLoadingTrayAccessPromptId'
+
+const { PaperLoadingTrayDialog, PAPER_LOADING_TRAY_DIALOG_ID } = require('./paper-loading-tray')
 
 class StartDialog extends ComponentDialog {
   constructor (dialogId) {
@@ -18,10 +20,12 @@ class StartDialog extends ComponentDialog {
     this.addDialog(
       new WaterfallDialog(DIALOG_ID, [
         this.disclaimer.bind(this),
-        this.prompt.bind(this)
+        this.prompt.bind(this),
+        this.end.bind(this)
       ])
     )
     this.addDialog(new ChoicePrompt(PROMPT_ID))
+    this.addDialog(new PaperLoadingTrayDialog(PAPER_LOADING_TRAY_DIALOG_ID))
   }
 
   async disclaimer (step) {
@@ -30,6 +34,13 @@ class StartDialog extends ComponentDialog {
   }
 
   async prompt (step) {
+    if (step.result.value === 'Yes') {
+      return step.beginDialog(PAPER_LOADING_TRAY_DIALOG_ID)
+    }
+    return step.endDialog()
+  }
+
+  async end (step) {
     return step.endDialog()
   }
 }

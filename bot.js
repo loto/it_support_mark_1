@@ -1,11 +1,10 @@
 require('dotenv').config()
 const { ActivityTypes } = require('botbuilder')
 const { LuisRecognizer } = require('botbuilder-ai')
-const { DialogSet } = require('botbuilder-dialogs')
+const { DialogSet, DialogTurnStatus } = require('botbuilder-dialogs')
 
 const { WelcomeCard } = require('./cards/welcome')
 const { HelpCard } = require('./cards/help')
-const { ErrorCard } = require('./cards/error')
 const LUIS_CONFIGURATION = 'BasicBotLuisApplication'
 const INTENT = {
   HELP: 'Help',
@@ -65,27 +64,26 @@ class Bot {
 
   async onActivityMessage (turnContext) {
     const dialogContext = await this.dialogs.createContext(turnContext)
-    const results = await this.luisRecognizer.recognize(turnContext)
-    const topIntent = LuisRecognizer.topIntent(results)
+    const intents = await this.luisRecognizer.recognize(turnContext)
+    const topIntent = LuisRecognizer.topIntent(intents)
     const interrupted = await this.isTurnInterrupted(dialogContext, topIntent)
 
-    if (interrupted) {
-      if (dialogContext.activeDialog !== undefined) {
-        await dialogContext.repromptDialog()
-      }
-    } else {
-      if (dialogContext.activeDialog) {
-        await dialogContext.continueDialog()
-        if (!turnContext.responded && dialogContext.activeDialog) {
-          await dialogContext.endDialog()
-          await turnContext.sendActivity({ attachments: [ErrorCard, HelpCard] })
-        }
-      } else {
+    if (interrupted && dialogContext.activeDialog !== undefined) return dialogContext.repromptDialog()
+
+    const dialogTurnResult = await dialogContext.continueDialog()
+    switch (dialogTurnResult.status) {
+      case DialogTurnStatus.complete:
+      case DialogTurnStatus.cancelled:
+      case DialogTurnStatus.empty:
+        await this.userState.saveChanges(turnContext)
         if (topIntent === INTENT.PRINTER_PAPER_JAM) {
           await dialogContext.beginDialog(PRINTER_PAPER_JAM_START_DIALOG_ID)
         }
-      }
+        break
+      case DialogTurnStatus.waiting:
+        break
     }
+    await this.conversationState.saveChanges(turnContext)
   }
 
   async onActivityEvent (turnContext) {
