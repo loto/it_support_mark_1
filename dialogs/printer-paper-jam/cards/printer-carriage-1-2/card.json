@@ -1,0 +1,28 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "color": "Accent",
+      "text": "Ensure the printer carriage can move freely",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "1.",
+          "value": "Disconnect the printer from power by unplugging the power cord from the power outlet."
+        },
+        {
+          "title": "2.",
+          "value": "Watch the carriage to see if it moves all the way to the right side of the printer and out of sight. Do not force the carriage to move if it's stuck, as this may damage your printer."
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}

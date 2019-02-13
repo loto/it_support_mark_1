@@ -1,0 +1,20 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "3.",
+          "value": "Remove stuck paper one sheet at a time, starting in the middle."
+        },
+        {
+          "title": "4.",
+          "value": "Check for any remaining bits of paper."
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}

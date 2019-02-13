@@ -5,11 +5,12 @@ const {
 } = require('botbuilder-dialogs')
 
 const { DisclaimerCard } = require('./cards/disclaimer')
-
+const { PaperLoadingTrayCard12 } = require('./cards/paper-loading-tray-1-2')
+const { PaperLoadingTrayCard34 } = require('./cards/paper-loading-tray-3-4')
 const DIALOG_ID = 'startDialogId'
-const PROMPT_ID = 'paperLoadingTrayAccessPromptId'
+const PROMPT_ID = 'startPromptId'
 
-const { PaperLoadingTrayDialog, PAPER_LOADING_TRAY_DIALOG_ID } = require('./paper-loading-tray')
+const { PrinterCarriageDialog, PRINTER_CARRIAGE_DIALOG_ID } = require('./printer-carriage')
 
 class StartDialog extends ComponentDialog {
   constructor (dialogId) {
@@ -19,29 +20,40 @@ class StartDialog extends ComponentDialog {
 
     this.addDialog(
       new WaterfallDialog(DIALOG_ID, [
-        this.disclaimer.bind(this),
-        this.prompt.bind(this),
+        this.first.bind(this),
+        this.second.bind(this),
+        this.third.bind(this),
         this.end.bind(this)
       ])
     )
     this.addDialog(new ChoicePrompt(PROMPT_ID))
-    this.addDialog(new PaperLoadingTrayDialog(PAPER_LOADING_TRAY_DIALOG_ID))
+    this.addDialog(new PrinterCarriageDialog(PRINTER_CARRIAGE_DIALOG_ID))
   }
 
-  async disclaimer (step) {
-    step.context.sendActivity({ attachments: [DisclaimerCard] })
-    return step.prompt(PROMPT_ID, 'Can you access the paper loading tray?', ['Yes', 'No'])
+  async first (stepContext) {
+    await stepContext.context.sendActivity({ attachments: [DisclaimerCard] })
+    await stepContext.context.sendActivity({ attachments: [PaperLoadingTrayCard12] })
+    return stepContext.prompt(PROMPT_ID, 'Is the paper jam cleared?', ['Yes', 'No'])
   }
 
-  async prompt (step) {
-    if (step.result.value === 'Yes') {
-      return step.beginDialog(PAPER_LOADING_TRAY_DIALOG_ID)
+  async second (stepContext) {
+    if (stepContext.result.value === 'Yes') {
+      return stepContext.replaceDialog(PRINTER_CARRIAGE_DIALOG_ID)
+    } else {
+      await stepContext.context.sendActivity({ attachments: [PaperLoadingTrayCard34] })
+      return stepContext.prompt(PROMPT_ID, 'Is the paper jam cleared?', ['Yes', 'No'])
     }
-    return step.endDialog()
   }
 
-  async end (step) {
-    return step.endDialog()
+  async third (stepContext) {
+    if (stepContext.result.value === 'Yes') {
+      return stepContext.replaceDialog(PRINTER_CARRIAGE_DIALOG_ID)
+    }
+  }
+
+  async end (stepContext) {
+    await stepContext.context.sendActivity('StartDialog end')
+    return stepContext.endDialog()
   }
 }
 

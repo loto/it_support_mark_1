@@ -2,14 +2,22 @@
   "type": "AdaptiveCard",
   "body": [
     {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "color": "Accent",
+      "text": "Locate and remove any paper stuck in the loading tray",
+      "wrap": true
+    },
+    {
       "type": "FactSet",
       "facts": [
         {
-          "title": "Step 1:",
+          "title": "1.",
           "value": "Remove any loose paper in the loading tray."
         },
         {
-          "title": "Step 2:",
+          "title": "2.",
           "value": "Press the Resume button on the front of the printer."
         }
       ]
