@@ -1,0 +1,51 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 5:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Press the button on top of the module and open the door.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 6:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Remove the panel and carefully pull out the jammed paper.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 7:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Locate and clear away any small bits of paper that remain.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 8:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Close the rear module door.",
+      "wrap": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
