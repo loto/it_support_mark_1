@@ -1,0 +1,42 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "color": "Accent",
+      "text": "Reloading and testing the printer",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Once you've removed the jam, cleared away any remaining bits of paper, and ensured that the print carriage can move without issue, test your printer.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 1:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Put some inkjet paper into the loading tray and slide it into place.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 2:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Print a test page by performing a self-test. Usually, a self-test can be initiated by pressing and holding the Resume button until the printer starts printing.",
+      "wrap": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}

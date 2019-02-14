@@ -6,9 +6,10 @@ const {
 
 const { PrinterCarriageCard12 } = require('./cards/printer-carriage-1-2')
 const { PrinterCarriageCard39 } = require('./cards/printer-carriage-3-9')
-
 const DIALOG_ID = 'paperCarriageDialogId'
 const PROMPT_ID = 'paperCarriagePromptId'
+
+const { ReloadingTestingDialog, RELOADING_TESTING_DIALOG_ID } = require('./reloading-testing')
 
 class PrinterCarriageDialog extends ComponentDialog {
   constructor (dialogId) {
@@ -23,6 +24,7 @@ class PrinterCarriageDialog extends ComponentDialog {
       ])
     )
     this.addDialog(new ChoicePrompt(PROMPT_ID))
+    this.addDialog(new ReloadingTestingDialog(RELOADING_TESTING_DIALOG_ID))
   }
 
   async first (stepContext) {
@@ -32,12 +34,11 @@ class PrinterCarriageDialog extends ComponentDialog {
 
   async end (stepContext) {
     if (stepContext.result.value === 'Yes') {
-      await stepContext.context.sendActivity('Should branch out to Reloading and testing the printer')
+      return stepContext.replaceDialog(RELOADING_TESTING_DIALOG_ID)
     } else {
       await stepContext.context.sendActivity({ attachments: [PrinterCarriageCard39] })
-      await stepContext.context.sendActivity('Should branch out to Reloading and testing the printer')
+      return stepContext.replaceDialog(RELOADING_TESTING_DIALOG_ID)
     }
-    return stepContext.endDialog()
   }
 }
 
