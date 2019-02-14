@@ -11,19 +11,19 @@
       "columns": [
         {
           "type": "Column",
-          "horizontalAlignment": "Left",
+          "horizontalAlignment": "left",
           "items": [
             {
               "type": "Image",
               "url": "https://image.flaticon.com/icons/png/512/97/97918.png",
-              "size": "Small"
+              "size": "small"
             }
           ],
           "width": "auto"
         },
         {
           "type": "Column",
-          "horizontalAlignment": "Left",
+          "horizontalAlignment": "left",
           "items": [
             {
               "type": "TextBlock",
@@ -40,19 +40,19 @@
       "columns": [
         {
           "type": "Column",
-          "horizontalAlignment": "Left",
+          "horizontalAlignment": "left",
           "items": [
             {
               "type": "Image",
               "url": "https://image.flaticon.com/icons/png/512/107/107788.png",
-              "size": "Small"
+              "size": "small"
             }
           ],
           "width": "auto"
         },
         {
           "type": "Column",
-          "horizontalAlignment": "Left",
+          "horizontalAlignment": "left",
           "items": [
             {
               "type": "TextBlock",

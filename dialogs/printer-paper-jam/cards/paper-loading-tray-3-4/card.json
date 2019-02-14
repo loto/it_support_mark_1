@@ -2,17 +2,26 @@
   "type": "AdaptiveCard",
   "body": [
     {
-      "type": "FactSet",
-      "facts": [
-        {
-          "title": "3.",
-          "value": "Remove stuck paper one sheet at a time, starting in the middle."
-        },
-        {
-          "title": "4.",
-          "value": "Check for any remaining bits of paper."
-        }
-      ]
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 3:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Remove stuck paper one sheet at a time, starting in the middle.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 4:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Check for any remaining bits of paper.",
+      "wrap": true
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

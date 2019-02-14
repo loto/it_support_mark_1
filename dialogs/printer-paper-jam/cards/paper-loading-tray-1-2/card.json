@@ -3,24 +3,33 @@
   "body": [
     {
       "type": "TextBlock",
-      "size": "Medium",
-      "weight": "Bolder",
-      "color": "Accent",
+      "size": "medium",
+      "weight": "bolder",
+      "color": "accent",
       "text": "Locate and remove any paper stuck in the loading tray",
       "wrap": true
     },
     {
-      "type": "FactSet",
-      "facts": [
-        {
-          "title": "1.",
-          "value": "Remove any loose paper in the loading tray."
-        },
-        {
-          "title": "2.",
-          "value": "Press the Resume button on the front of the printer."
-        }
-      ]
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 1:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Remove any loose paper in the loading tray.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 2:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Press the Resume button on the front of the printer.",
+      "wrap": true
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

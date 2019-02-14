@@ -11,6 +11,7 @@ const DIALOG_ID = 'startDialogId'
 const PROMPT_ID = 'startPromptId'
 
 const { PrinterCarriageDialog, PRINTER_CARRIAGE_DIALOG_ID } = require('./printer-carriage')
+const { RearDialog, REAR_DIALOG_ID } = require('./rear')
 
 class StartDialog extends ComponentDialog {
   constructor (dialogId) {
@@ -22,12 +23,12 @@ class StartDialog extends ComponentDialog {
       new WaterfallDialog(DIALOG_ID, [
         this.first.bind(this),
         this.second.bind(this),
-        this.third.bind(this),
         this.end.bind(this)
       ])
     )
     this.addDialog(new ChoicePrompt(PROMPT_ID))
     this.addDialog(new PrinterCarriageDialog(PRINTER_CARRIAGE_DIALOG_ID))
+    this.addDialog(new RearDialog(REAR_DIALOG_ID))
   }
 
   async first (stepContext) {
@@ -45,15 +46,12 @@ class StartDialog extends ComponentDialog {
     }
   }
 
-  async third (stepContext) {
+  async end (stepContext) {
     if (stepContext.result.value === 'Yes') {
       return stepContext.replaceDialog(PRINTER_CARRIAGE_DIALOG_ID)
+    } else {
+      return stepContext.replaceDialog(REAR_DIALOG_ID)
     }
-  }
-
-  async end (stepContext) {
-    await stepContext.context.sendActivity('StartDialog end')
-    return stepContext.endDialog()
   }
 }
 

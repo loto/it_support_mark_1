@@ -3,16 +3,16 @@
   "body": [
     {
       "type": "TextBlock",
-      "size": "Medium",
-      "weight": "Bolder",
-      "color": "Accent",
+      "size": "medium",
+      "weight": "bolder",
+      "color": "accent",
       "text": "Ensure the printer carriage can move freely",
       "wrap": true
     },
     {
       "type": "TextBlock",
       "separator": true,
-      "weight": "Bolder",
+      "weight": "bolder",
       "text": "Step 1:"
     },
     {
@@ -23,7 +23,7 @@
     {
       "type": "TextBlock",
       "separator": true,
-      "weight": "Bolder",
+      "weight": "bolder",
       "text": "Step 2:"
     },
     {

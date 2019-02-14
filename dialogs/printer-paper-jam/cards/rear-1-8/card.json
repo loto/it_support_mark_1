@@ -1,0 +1,121 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "medium",
+      "weight": "bolder",
+      "color": "accent",
+      "text": "Clearing the jam from rear of the printer",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "If you can't get to the paper jam from the loading tray, follow the instructions to clear the paper from the rear of the printer. Usually, the back of the printer has either a rear access door or a two-sided printing accessory.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Removing a rear access panel"
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 1:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Locate the knob or access tab on the back of the printer by or on the panel itself. If it's a knob, move it to the Unlocked position.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 2:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Remove the panel and carefully pull out the jammed paper.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 3:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Locate and clear away any small bits of paper that remain.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 4:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Replace and secure the rear panel.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Remove the two-sided printing accessory to clear the paper jam",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 1:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Press both RELEASE buttons on either end of the module at the same time and remove it.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 2:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Remove the panel and carefully pull out the jammed paper.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 3:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Locate and clear away any small bits of paper that remain.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Step 4:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Push the module back on and snap it into place.",
+      "wrap": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
