@@ -10,17 +10,26 @@
       "wrap": true
     },
     {
-      "type": "FactSet",
-      "facts": [
-        {
-          "title": "1.",
-          "value": "Disconnect the printer from power by unplugging the power cord from the power outlet."
-        },
-        {
-          "title": "2.",
-          "value": "Watch the carriage to see if it moves all the way to the right side of the printer and out of sight. Do not force the carriage to move if it's stuck, as this may damage your printer."
-        }
-      ]
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 1:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Disconnect the printer from power by unplugging the power cord from the power outlet.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 2:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Watch the carriage to see if it moves all the way to the right side of the printer and out of sight. Do not force the carriage to move if it's stuck, as this may damage your printer.",
+      "wrap": true
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

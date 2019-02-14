@@ -1,0 +1,85 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 3:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Carefully remove the ink cartridge(s).",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 4:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Without removing the drawer, remove any paper in the loading tray.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 5:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Remove the two-sided printing accessory (module) or rear access door.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 6:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "With your fingers, rotate the rollers toward the top of the printer for three full rotations.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 7:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Replace the two-sided printing accessory (module) or rear access door.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 8:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Replace the ink cartridges.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "Bolder",
+      "text": "Step 9:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Plug in and turn on your printer.",
+      "wrap": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "speak": "Your flight is confirmed for you and 3 other passengers from San Francisco to Amsterdam on Friday, October 10 8:30 AM"
+}

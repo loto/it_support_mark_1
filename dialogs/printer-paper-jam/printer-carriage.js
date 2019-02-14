@@ -5,6 +5,7 @@ const {
 } = require('botbuilder-dialogs')
 
 const { PrinterCarriageCard12 } = require('./cards/printer-carriage-1-2')
+const { PrinterCarriageCard39 } = require('./cards/printer-carriage-3-9')
 
 const DIALOG_ID = 'paperCarriageDialogId'
 const PROMPT_ID = 'paperCarriagePromptId'
@@ -29,9 +30,14 @@ class PrinterCarriageDialog extends ComponentDialog {
     return stepContext.prompt(PROMPT_ID, 'Is the paper jam cleared?', ['Yes', 'No'])
   }
 
-  async end (step) {
-    await step.context.sendActivity('PrinterCarriageDialog end')
-    return step.endDialog({})
+  async end (stepContext) {
+    if (stepContext.result.value === 'Yes') {
+      await stepContext.context.sendActivity('Should branch out to Reloading and testing the printer')
+    } else {
+      await stepContext.context.sendActivity({ attachments: [PrinterCarriageCard39] })
+      await stepContext.context.sendActivity('Should branch out to Reloading and testing the printer')
+    }
+    return stepContext.endDialog()
   }
 }
 
