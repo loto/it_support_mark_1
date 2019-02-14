@@ -10,6 +10,7 @@ const DIALOG_ID = 'rearDialogId'
 const PROMPT_ID = 'rearPromptId'
 
 const { PrinterCarriageDialog, PRINTER_CARRIAGE_DIALOG_ID } = require('./printer-carriage')
+const { FrontDialog, FRONT_DIALOG_ID } = require('./front')
 
 class RearDialog extends ComponentDialog {
   constructor (dialogId) {
@@ -26,6 +27,7 @@ class RearDialog extends ComponentDialog {
     )
     this.addDialog(new ChoicePrompt(PROMPT_ID))
     this.addDialog(new PrinterCarriageDialog(PRINTER_CARRIAGE_DIALOG_ID))
+    this.addDialog(new FrontDialog(FRONT_DIALOG_ID))
   }
 
   async first (stepContext) {
@@ -46,8 +48,7 @@ class RearDialog extends ComponentDialog {
     if (stepContext.result.value === 'Yes') {
       return stepContext.replaceDialog(PRINTER_CARRIAGE_DIALOG_ID)
     } else {
-      await stepContext.context.sendActivity('Should branch out to Pulling paper out from under the front cover')
-      return stepContext.endDialog()
+      return stepContext.replaceDialog(FRONT_DIALOG_ID)
     }
   }
 }
