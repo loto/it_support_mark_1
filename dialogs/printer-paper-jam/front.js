@@ -5,8 +5,11 @@ const {
 } = require('botbuilder-dialogs')
 
 const { FrontCard1 } = require('./cards/front-1')
+const { FrontCard2 } = require('./cards/front-2')
 const DIALOG_ID = 'frontDialogId'
 const PROMPT_ID = 'frontPromptId'
+
+const { PrinterCarriageDialog, PRINTER_CARRIAGE_DIALOG_ID } = require('./printer-carriage')
 
 class FrontDialog extends ComponentDialog {
   constructor (dialogId) {
@@ -21,6 +24,7 @@ class FrontDialog extends ComponentDialog {
       ])
     )
     this.addDialog(new ChoicePrompt(PROMPT_ID))
+    this.addDialog(new PrinterCarriageDialog(PRINTER_CARRIAGE_DIALOG_ID))
   }
 
   async first (stepContext) {
@@ -29,8 +33,12 @@ class FrontDialog extends ComponentDialog {
   }
 
   async end (stepContext) {
-    await stepContext.context.sendActivity('Should branch out to ???')
-    return stepContext.endDialog()
+    if (stepContext.result.value === 'Yes') {
+      return stepContext.replaceDialog(PRINTER_CARRIAGE_DIALOG_ID)
+    } else {
+      await stepContext.context.sendActivity({ attachments: [FrontCard2] })
+      return stepContext.endDialog()
+    }
   }
 }
 

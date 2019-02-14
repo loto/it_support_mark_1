@@ -3,9 +3,9 @@
   "body": [
     {
       "type": "TextBlock",
-      "size": "Medium",
-      "weight": "Bolder",
-      "color": "Accent",
+      "size": "medium",
+      "weight": "bolder",
+      "color": "accent",
       "text": "Pulling paper out from under the front cover",
       "wrap": true
     },
@@ -19,7 +19,7 @@
       "columns": [
         {
           "type": "Column",
-          "horizontalAlignment": "Left",
+          "horizontalAlignment": "left",
           "items": [
             {
               "type": "Image",
@@ -31,7 +31,7 @@
         },
         {
           "type": "Column",
-          "horizontalAlignment": "Left",
+          "horizontalAlignment": "left",
           "items": [
             {
               "type": "TextBlock",

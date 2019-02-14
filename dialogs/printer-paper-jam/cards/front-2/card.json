@@ -1,0 +1,25 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "medium",
+      "weight": "bolder",
+      "color": "accent",
+      "text": "Continued problems? Possible printer hardware problems",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "If the printer claims there is still a paper jam after going through the steps above, your printer may have a hardware problem that is causing the issues. A malfunctioning roller or parts in the paper feed mechanism can make a printer think it has a paper jam.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "In the case of a hardware problem, it may be possible to have the printer repaired. However, due to the low costs of printers today, it is often cheaper to buy a new printer instead of having a printer repaired.",
+      "wrap": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
