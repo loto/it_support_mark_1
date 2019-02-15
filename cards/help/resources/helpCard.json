@@ -5,9 +5,8 @@
   "body": [
     {
       "type": "TextBlock",
-      "text": "For now, I can only respond to help inquiries. But soon I'll be able to provide more services.",
+      "text": "I can only help you to resolve printer paper jams. You can ask for help anytime during the conversation or cancel anytime.",
       "wrap": true
     }
-  ],
-  "speak": "For now, I can only respond to help inquiries. But soon I'll be able to provide more services."
+  ]
 }

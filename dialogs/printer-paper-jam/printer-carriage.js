@@ -29,7 +29,7 @@ class PrinterCarriageDialog extends ComponentDialog {
 
   async first (stepContext) {
     await stepContext.context.sendActivity({ attachments: [PrinterCarriageCard12] })
-    return stepContext.prompt(PROMPT_ID, 'Is the paper jam cleared?', ['Yes', 'No'])
+    return stepContext.prompt(PROMPT_ID, 'Does the printer carriage move?', ['Yes', 'No'])
   }
 
   async end (stepContext) {

@@ -3,10 +3,10 @@
   "body": [
     {
       "type": "TextBlock",
-      "size": "Medium",
-      "weight": "Bolder",
-      "color": "Accent",
+      "color": "accent",
+      "size": "medium",
       "text": "Reloading and testing the printer",
+      "weight": "bolder",
       "wrap": true
     },
     {
@@ -17,8 +17,8 @@
     {
       "type": "TextBlock",
       "separator": true,
-      "weight": "Bolder",
-      "text": "Step 1:"
+      "text": "Step 1:",
+      "weight": "bolder"
     },
     {
       "type": "TextBlock",
@@ -28,12 +28,19 @@
     {
       "type": "TextBlock",
       "separator": true,
-      "weight": "Bolder",
-      "text": "Step 2:"
+      "text": "Step 2:",
+      "weight": "bolder"
     },
     {
       "type": "TextBlock",
       "text": "Print a test page by performing a self-test. Usually, a self-test can be initiated by pressing and holding the Resume button until the printer starts printing.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "separator": true,
+      "text": "Congratulations! You reached the end of the printer paper jam troubleshooting procedure.",
+      "weight": "bolder",
       "wrap": true
     }
   ],
