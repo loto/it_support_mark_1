@@ -80,3 +80,6 @@ typings/
 
 # Azure
 *.bot
+
+# System
+*.DS_Store
