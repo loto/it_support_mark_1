@@ -14,7 +14,7 @@
   "author": "Lionel Oto",
   "license": "ISC",
   "engines": {
-    "node": "~11.9",
+    "node": "~11.10",
     "npm": "6.7"
   },
   "dependencies": {
