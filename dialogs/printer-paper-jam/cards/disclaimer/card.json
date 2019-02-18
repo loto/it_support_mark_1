@@ -7,62 +7,17 @@
       "wrap": true
     },
     {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "horizontalAlignment": "left",
-          "items": [
-            {
-              "type": "Image",
-              "url": "https://image.flaticon.com/icons/png/512/97/97918.png",
-              "size": "small"
-            }
-          ],
-          "width": "auto"
-        },
-        {
-          "type": "Column",
-          "horizontalAlignment": "left",
-          "items": [
-            {
-              "type": "TextBlock",
-              "text": "Warning: You'll want to avoid pulling stuck paper out from under the front cover if possible, as it may cause damage to the printer. Instead, pull it from the back of the printer or paper tray.",
-              "wrap": true
-            }
-          ],
-          "width": "stretch"
-        }
-      ]
+      "type": "TextBlock",
+      "separator": true,
+      "weight": "bolder",
+      "text": "Warning: You'll want to avoid pulling stuck paper out from under the front cover if possible, as it may cause damage to the printer. Instead, pull it from the back of the printer or paper tray.",
+      "wrap": true
     },
     {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "horizontalAlignment": "left",
-          "items": [
-            {
-              "type": "Image",
-              "url": "https://image.flaticon.com/icons/png/512/107/107788.png",
-              "size": "small"
-            }
-          ],
-          "width": "auto"
-        },
-        {
-          "type": "Column",
-          "horizontalAlignment": "left",
-          "items": [
-            {
-              "type": "TextBlock",
-              "text": "Note: It is important that you go through all of the following sections to avoid damage to your printer.",
-              "wrap": true
-            }
-          ],
-          "width": "stretch"
-        }
-      ]
+      "type": "TextBlock",
+      "separator": true,
+      "text": "Note: It is important that you go through all of the following sections to avoid damage to your printer.",
+      "wrap": true
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

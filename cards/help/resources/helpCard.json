@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "TextBlock",
-      "text": "I can only help you to resolve printer paper jams. You can ask for help anytime during the conversation or cancel anytime.",
+      "text": "I can help you to resolve printer paper jams. You can ask for help or cancel anytime during the conversation. If you ask for help, you'll this message.",
       "wrap": true
     }
   ]
